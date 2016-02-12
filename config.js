@@ -2,7 +2,7 @@
 require('dotenv').load();
 
 var config = {
-    env:  'prod',
+    env:  process.env.ENVIRONMENT || 'prod',
 
     host: '0.0.0.0',
     port: process.env.PORT || 5000,
