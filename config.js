@@ -19,7 +19,7 @@ var config = {
     // clients configs
     api: {
         aws: {
-            region: 'eu-west-1'
+            region: 'us-east-1'
         },
         jenkins: {
             baseUrl: process.env.JENKINS_URL,
