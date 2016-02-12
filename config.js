@@ -11,9 +11,10 @@ var config = {
     // + night-blue
     // + light-grey
     // + yellow
+    // + snow
     // + light-yellow
     // + bordeau
-    theme: 'night-blue',
+    theme: 'snow',
 
     // clients configs
     api: {
