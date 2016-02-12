@@ -44,29 +44,22 @@ var config = {
             widgets: [
                 {
                     type: 'github.user_badge',
-                    user: 'plouc',
+                    user: 'trinitronx',
                     columns: 1, rows: 1,
                     x: 0, y: 0
                 },
                 {
-                    type: 'github.repository_contributors_stats',
-                    repository: 'plouc/mozaik',
-                    columns: 1, rows: 1,
-                    x: 2, y: 0
-                },
-                {
                     type: 'travis.repository',
-                    owner: 'plouc',
-                    repository: 'mozaik',
+                    owner: 'trinitronx',
+                    repository: 'ansible-docker-base',
                     columns: 1, rows: 1,
                     x: 1, y: 0
                 },
                 {
-                    type: 'travis.build_histogram',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 2, rows: 1,
-                    x: 1, y: 1
+                    type: 'github.repository_contributors_stats',
+                    repository: 'trinitronx/ansible-docker-base',
+                    columns: 1, rows: 1,
+                    x: 2, y: 0
                 },
                 {
                     type: 'time.clock',
@@ -75,32 +68,40 @@ var config = {
                 },
                 {
                     type: 'weather.weather',
-                    city: 'Tokyo',
-                    country: 'JP',
+                    token: process.env.WEATHER_API_TOKEN,
+                    city: 'Denver',
+                    country: 'US',
                     lang: 'en',
                     limit: 2,
                     columns: 1, rows: 1,
                     x: 0, y: 1
                 },
                 {
-                    type: 'travis.build_history',
-                    owner: 'plouc',
-                    repository: 'mozaik',
-                    columns: 1, rows: 2,
-                    x: 3, y: 1
+                    type: 'travis.build_histogram',
+                    owner: 'trinitronx',
+                    repository: 'ansible-docker-base',
+                    columns: 2, rows: 1,
+                    x: 1, y: 1
                 },
                 {
-                    type: 'travis.build_histogram',
-                    owner: 'plouc',
-                    repository: 'go-gitlab-client',
-                    columns: 2, rows: 1,
-                    x: 1, y: 2
+                    type: 'travis.build_history',
+                    owner: 'trinitronx',
+                    repository: 'ansible-docker-base',
+                    columns: 1, rows: 2,
+                    x: 3, y: 1
                 },
                 {
                     type: 'github.status',
                     columns: 1, rows: 1,
                     x: 0, y: 2
-                }
+                },
+                {
+                    type: 'travis.build_histogram',
+                    owner: 'trinitronx',
+                    repository: 'homebrew-truecrypt',
+                    columns: 2, rows: 1,
+                    x: 1, y: 2
+                },
             ]
         },
 
@@ -112,33 +113,170 @@ var config = {
             widgets: [
                 {
                     type: 'travis.build_history',
-                    owner: 'plouc',
-                    repository: 'mozaik',
+                    owner: 'trinitronx',
+                    repository: 'kodi-cookbook',
                     columns: 1, rows: 2,
                     x: 0, y: 0
                 },
                 {
                     type: 'github.user_badge',
-                    user: 'plouc',
+                    user: 'trinitronx',
                     columns: 1, rows: 1,
                     x: 2, y: 0
                 },
                 {
                     type: 'travis.repository',
-                    owner: 'plouc',
-                    repository: 'mozaik',
+                    owner: 'trinitronx',
+                    repository: 'kodi-cookbook',
                     columns: 1, rows: 1,
                     x: 1, y: 0
                 },
                 {
                     type: 'travis.build_histogram',
-                    owner: 'plouc',
-                    repository: 'mozaik',
+                    owner: 'trinitronx',
+                    repository: 'kodi-cookbook',
                     columns: 2, rows: 1,
                     x: 1, y: 1
                 }
             ]
+        },
+        // third dashboard
+        {
+            // 4 x 3 dashboard
+            columns: 4,
+            rows:    3,
+            widgets: [
+                {
+                    type: 'jenkins.job_status',
+                    job: 'efp-optimus-prime',
+                    columns: 1, rows: 1,
+                    x: 0, y: 0
+                },
+                {
+                    type: 'github.branches',
+                    repository: 'ReturnPath/efp-optimus-prime',
+                    columns: 1, rows: 1,
+                    x: 1, y: 0
+                },
+                {
+                    type: 'github.repository_contributors_stats',
+                    repository: 'ReturnPath/efp-optimus-prime',
+                    columns: 1, rows: 1,
+                    x: 2, y: 0
+                },
+                {
+                    type: 'github.issue_labels_donut',
+                    repository: 'ReturnPath/efp-optimus-prime',
+                    columns: 1, rows: 1,
+                    x: 3, y: 0
+                },
+                {
+                    type: 'jenkins.job_builds',
+                    job: 'efp-optimus-prime',
+                    columns: 1, rows: 2,
+                    x: 0, y: 1
+                },
+                {
+                    type: 'jenkins.job_builds_histogram',
+                    job: 'efp-optimus-prime',
+                    columns: 2, rows: 1,
+                    x: 1, y: 1
+                },
+                {
+                    type: 'github.issue_labels_treemap',
+                    repository: 'ReturnPath/efp-optimus-prime',
+                    labels: [
+                        { color: '#6bc2c8', count: 13, name: 'blocker'     },
+                        { color: '#5f8cc0', count: 3,  name: 'enhancement' },
+                        { color: '#525487', count: 7,  name: 'bug'         },
+                        { color: '#383b72', count: 16, name: 'help-wanted' }
+                    ],
+                    columns: 1, rows: 1,
+                    x: 3, y: 1
+                },
+                {
+                    type: 'github.top_committer',
+                    repository: 'ReturnPath/efp-optimus-prime',
+                    frequency: 'daily',
+                    columns: 1, rows: 1,
+                    x: 1, y: 2
+                },
+                {
+                    type: 'jenkins.view',
+                    view: 'EFP',
+                    columns: 2, rows: 1,
+                    x: 2, y: 2
+                }
+            ]
+        },
+        // fourth dashboard
+        {
+            // 4 x 3 dashboard
+            columns: 4,
+            rows:    3,
+            widgets: [
+                {
+                    type: 'jenkins.job_status',
+                    job: 'auth_big_downloads',
+                    columns: 1, rows: 1,
+                    x: 0, y: 0
+                },
+                {
+                    type: 'github.user_badge',
+                    user: 'STLMikey',
+                    columns: 1, rows: 1,
+                    x: 1, y: 0
+                },
+                {
+                    type: 'github.repository_contributors_stats',
+                    repository: 'ReturnPath/auth-big-downloads',
+                    columns: 1, rows: 1,
+                    x: 2, y: 0
+                },
+                {
+                    type: 'jenkins.jobs',
+                    columns: 1, rows: 2,
+                    x: 3, y: 0
+                },
+                {
+                    type: 'jenkins.job_builds',
+                    job: 'auth_big_downloads',
+                    columns: 1, rows: 2,
+                    x: 0, y: 1
+                },
+                {
+                    type: 'jenkins.job_builds_histogram',
+                    job: 'auth_big_downloads',
+                    columns: 2, rows: 1,
+                    x: 1, y: 1
+                },
+                {
+                    type: 'github.branches',
+                    repository: 'ReturnPath/auth-big-downloads',
+                    columns: 1, rows: 1,
+                    x: 1, y: 2
+                },
+                {
+                    type: 'github.issue_labels_donut',
+                    repository: 'ReturnPath/auth-big-downloads',
+                    columns: 1, rows: 1,
+                    x: 2, y: 2
+                },
+                {
+                    type: 'github.issue_labels_treemap',
+                    repository: 'ReturnPath/auth-big-downloads',
+                    labels: [
+                        { color: '#6bc2c8', count: 13, name: 'blocker'     },
+                        { color: '#5f8cc0', count: 3,  name: 'enhancement' },
+                        { color: '#525487', count: 7,  name: 'bug'         },
+                        { color: '#383b72', count: 16, name: 'help-wanted' }
+                    ],
+                    columns: 1, rows: 1,
+                    x: 3, y: 2
+                }
+            ]
         }
+
     ]
 };
 
