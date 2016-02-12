@@ -26,6 +26,8 @@ var config = {
             basicAuthUser: process.env.JENKINS_USER,
             basicAuthPassword: process.env.JENKINS_PASSWORD
         },
+        weather: {
+            token: process.env.WEATHER_API_TOKEN
         }
     },
 
