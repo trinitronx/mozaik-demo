@@ -21,11 +21,10 @@ var config = {
             region: 'eu-west-1'
         },
         jenkins: {
-            baseUrl: 'https://my-jenkins.com',
-            auth: {
-                user:     'me',
-                password: 'me'
-            }
+            baseUrl: process.env.JENKINS_URL,
+            basicAuthUser: process.env.JENKINS_USER,
+            basicAuthPassword: process.env.JENKINS_PASSWORD
+        },
         }
     },
 

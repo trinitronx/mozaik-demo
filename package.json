@@ -23,6 +23,7 @@
     "mozaik-ext-time": "1.0.0",
     "mozaik-ext-travis": "1.0.4",
     "mozaik-ext-weather": "1.0.0",
+    "mozaik-ext-jenkins": "^1.0.0",
     "react": "^0.13.3"
   },
   "scripts": {
