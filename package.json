@@ -15,16 +15,19 @@
   },
   "dependencies": {
     "babel": "^5.8.12",
+    "bluebird": "^2.10.2",
     "dotenv": "^0.5.1",
     "gulp": "^3.9.0",
     "lodash": "^3.10.0",
     "mozaik": "1.0.10",
     "mozaik-ext-github": "1.0.6",
+    "mozaik-ext-jenkins": "^1.0.0",
+    "mozaik-ext-json": "0.0.11",
     "mozaik-ext-time": "1.0.0",
     "mozaik-ext-travis": "1.0.4",
     "mozaik-ext-weather": "1.0.0",
-    "mozaik-ext-jenkins": "^1.0.0",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "superagent": "^1.8.3"
   },
   "scripts": {
     "test": "npm run build-assets",
