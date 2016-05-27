@@ -75,6 +75,8 @@ var config = {
                     columns: 1, rows: 1,
                     x: 0, y: 1
                 },
+// Broken
+/*
                 {
                     type: 'weather.weather',
                     token: process.env.WEATHER_API_TOKEN,
@@ -85,6 +87,7 @@ var config = {
                     columns: 1, rows: 1,
                     x: 0, y: 1
                 },
+*/
                 {
                     type: 'travis.build_histogram',
                     owner: 'trinitronx',
