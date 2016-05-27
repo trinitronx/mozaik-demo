@@ -8,12 +8,13 @@ var config = {
     port: process.env.PORT || 5000,
 
     // Available themes:
-    // + night-blue
-    // + light-grey
-    // + yellow
-    // + snow
-    // + light-yellow
     // + bordeau
+    // + harlequin
+    // + light-grey
+    // + light-yellow
+    // + night-blue
+    // + snow
+    // + yellow
     theme: 'snow',
 
     // clients configs
@@ -34,8 +35,11 @@ var config = {
         }
     },
 
-    // define duration beetwen each dashboard rotation (ms)
+    // define duration between each dashboard rotation (ms)
     rotationDuration: 8000,
+
+    // define the interval used by Mozaïk Bus to call registered APIs
+    apisPollInterval: 15000,
 
     dashboards: [
 
