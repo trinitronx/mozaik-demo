@@ -70,6 +70,12 @@ var config = {
                     x: 3, y: 0
                 },
                 {
+                    type: 'github.branches',
+                    repository: 'trinitronx/ansible-docker-base',
+                    columns: 1, rows: 1,
+                    x: 0, y: 1
+                },
+                {
                     type: 'weather.weather',
                     token: process.env.WEATHER_API_TOKEN,
                     city: 'Denver',
@@ -122,8 +128,8 @@ var config = {
                     x: 0, y: 0
                 },
                 {
-                    type: 'github.user_badge',
-                    user: 'trinitronx',
+                    type: 'github.branches',
+                    repository: 'trinitronx/kodi-cookbook',
                     columns: 1, rows: 1,
                     x: 2, y: 0
                 },
