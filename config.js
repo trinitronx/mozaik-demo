@@ -21,6 +21,9 @@ var config = {
         aws: {
             region: 'us-east-1'
         },
+        github: {
+            token: process.env.GITHUB_API_TOKEN
+        },
         jenkins: {
             baseUrl: process.env.JENKINS_URL,
             basicAuthUser: process.env.JENKINS_USER,
