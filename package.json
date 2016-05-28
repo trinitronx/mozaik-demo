@@ -26,7 +26,7 @@
     "mozaik": "1.4.4",
     "mozaik-ext-github": "1.2.2",
     "mozaik-ext-jenkins": "^1.0.0",
-    "mozaik-ext-json": "0.0.11",
+    "mozaik-ext-json": "trinitronx/mozaik-ext-json#e7bcc93f80eb85a4785582730ba649debff9bfa1",
     "mozaik-ext-time": "1.1.0",
     "mozaik-ext-travis": "1.1.0",
     "mozaik-ext-weather": "1.2.0",
