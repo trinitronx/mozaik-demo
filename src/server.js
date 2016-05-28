@@ -4,6 +4,7 @@ import github  from 'mozaik-ext-github/client';
 import travis  from 'mozaik-ext-travis/client';
 import weather from 'mozaik-ext-weather/client';
 import jenkins from 'mozaik-ext-jenkins/client';
+import json from 'mozaik-ext-json/client';
 
 const mozaik = new Mozaik(config);
 
@@ -11,5 +12,6 @@ mozaik.bus.registerApi('github',  github);
 mozaik.bus.registerApi('travis',  travis);
 mozaik.bus.registerApi('weather', weather);
 mozaik.bus.registerApi('jenkins', jenkins);
+mozaik.bus.registerApi('json', json);
 
 mozaik.startServer();

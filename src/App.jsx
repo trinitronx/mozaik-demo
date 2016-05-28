@@ -5,6 +5,7 @@ import travis  from 'mozaik-ext-travis';
 import time    from 'mozaik-ext-time';
 import weather from 'mozaik-ext-weather';
 import jenkins from 'mozaik-ext-jenkins';
+import json from 'mozaik-ext-json';
 
 
 const MozaikComponent = Mozaik.Component.Mozaik;
@@ -16,7 +17,8 @@ Mozaik.Registry.addExtensions({
     travis,
     time,
     weather,
-    jenkins
+    jenkins,
+    json
 });
 
 React.render(<MozaikComponent/>, document.getElementById('mozaik'));

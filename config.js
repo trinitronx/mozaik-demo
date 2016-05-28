@@ -32,6 +32,9 @@ var config = {
         },
         weather: {
             token: process.env.WEATHER_API_TOKEN
+        },
+        json: {
+            url: process.env.JSON_API_URL
         }
     },
 
@@ -42,7 +45,37 @@ var config = {
     apisPollInterval: 15000,
 
     dashboards: [
-
+        // zero-th dashboard (hackathon JSON test)
+        {
+            columns: 2,
+            rows:    2,
+            widgets: [
+                {
+                    type: 'json.data',
+                    title: 'Intel Edison Temperature Sensor',
+                    value: '${0.temperature}',
+                    unit:  '℃',
+                    columns: 1, rows: 1,
+                    x: 0, y: 0
+                },
+                {
+                    type: 'json.data',
+                    title: 'Intel Edison Light Sensor',
+                    value: '${0.light}',
+                    unit:  'Volts',
+                    columns: 1, rows: 1,
+                    x: 1, y: 0
+                },
+                {
+                    type: 'json.data',
+                    title: 'Data Point Taken',
+                    value: '${0.time}',
+                    unit:  '',
+                    columns: 2, rows: 1,
+                    x: 0, y: 1
+                }
+            ]
+        },
         // first dashboard
         {
             // 4 x 3 dashboard
