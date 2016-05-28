@@ -1,0 +1,4 @@
+dev-spikes
+node_modules/*
+*.env.sh
+.env
