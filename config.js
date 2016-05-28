@@ -324,8 +324,20 @@ var config = {
                     x: 3, y: 2
                 }
             ]
+        },
+        // fifth dashboard
+        {
+            columns: 3,
+            rows:    2,
+            widgets: [
+                {
+                    type: 'jenkins.view',
+                    view: 'EFP',
+                    columns: 3, rows: 2,
+                    x: 0, y: 0
+                },
+            ]
         }
-
     ]
 };
 
